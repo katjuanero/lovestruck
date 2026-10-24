@@ -76,5 +76,5 @@ photos: [
   "assets/Photo4.jpg"
 ],
 
-songUrl: ""
+songUrl: "https://open.spotify.com/track/1FWsomP9StpCcXNWmJk8Cl?si=bPtF7MaBQAKWODrBXwx5zA&utm_source=copy-link&rowId=14321dfac26f0822"
 };
