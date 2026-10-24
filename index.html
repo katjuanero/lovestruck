@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f8f3ed" />
+  <meta name="description" content="A tiny corner of the internet, made with love." />
+  <title>For You, Always ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="petal-layer" aria-hidden="true"></div>
+  <header class="topbar"><a class="brand" href="#home">our little forever <span>✳</span></a><nav aria-label="Main navigation"><a href="#story">our story</a><a href="#gallery">moments</a><a href="#letter">your letter</a></nav><a class="nav-heart" href="#letter" aria-label="Go to the love letter">♡</a></header>
+  <main>
+    <section id="home" class="hero section-shell">
+      <span class="eyebrow">A LOVE LETTER WRITTEN IN PIXELS · EST. <span id="start-year">2024</span></span>
+      <img src="assets/flower-left.svg" class="hero-flower flower-left" alt="Illustrated pink carnations" />
+      <img src="assets/flower-right.svg" class="hero-flower flower-right" alt="Illustrated white lilies" />
+      <div class="hero-center"><span class="tiny-heart">♡</span><p class="hero-pretitle">Happy 2nd anniversary</p><h1>To you,<br /><em>my always.</em></h1><p id="hero-line" class="hero-subtitle"></p><a class="primary-btn" href="#story">Walk through our story <span>↗</span></a><div class="hero-scroll">a little something for you <span>↓</span></div></div>
+      <span class="edge-note">HANDMADE WITH SO MUCH LOVE</span>
+    </section>
+    <section class="chapter-intro section-shell" id="story"><span class="eyebrow">01 / THE BEGINNING OF EVERYTHING</span><h2>Every love story is beautiful.<br /><em>Ours is my favorite.</em></h2><p id="intro-text"></p><div class="countdown-grid"><div><strong id="years-count">2</strong><span>years together</span></div><div><strong id="days-count"></strong><span>days of us</span></div><div><strong>∞</strong><span>reasons to stay</span></div></div></section>
+    <section class="timeline-section section-shell"><div class="section-heading"><div><span class="eyebrow">02 / OUR CHAPTERS</span><h2>Little moments,<br /><em>big feelings.</em></h2></div><p>Some memories deserve their own little corner of the internet.</p></div><div id="timeline" class="timeline"></div></section>
+    <section id="gallery" class="gallery-section section-shell"><div class="section-heading"><div><span class="eyebrow">03 / THE MEMORY WALL</span><h2>Us, in every <em>frame.</em></h2></div><p>Favorite moments, all in one place.</p></div><div class="photo-grid" id="photo-grid"></div></section>
+    <section class="reasons-section section-shell"><div class="reasons-illustration"><img src="assets/bouquet.svg" alt="Watercolor-inspired bouquet of lilies and carnations" loading="lazy" /></div><div class="reasons-content"><span class="eyebrow">04 / JUST BECAUSE</span><h2>A million reasons.<br /><em>Here’s one.</em></h2><div class="reason-card"><span class="reason-number" id="reason-index">01 / 06</span><p id="reason-text" aria-live="polite"></p><button id="reason-btn" class="outline-btn" type="button">Another reason <span>↻</span></button></div></div></section>
+    <section id="letter" class="letter-section section-shell"><span class="eyebrow">05 / THE WORDS I WANT YOU TO KEEP</span><h2>Something from <em>my heart.</em></h2><p>For the moments you need a reminder of how loved you are.</p><button class="envelope" id="open-letter" type="button" aria-label="Open your love letter"><span class="envelope-back"></span><span class="envelope-paper">just for you ♡</span><span class="envelope-flap"></span><span class="envelope-front"></span><span class="envelope-seal">♥</span></button><p class="envelope-hint">tap the envelope to open your letter</p><div class="edit-hint"><button type="button" id="edit-letter-btn">✎ write or edit the letter on this device</button></div></section>
+    <section class="closing section-shell"><img src="assets/small-flower.svg" alt="A pink carnation" loading="lazy" /><span class="eyebrow">THE BEST IS STILL AHEAD</span><h2>In every lifetime,<br /><em>I’d find you.</em></h2><p>Happy 2nd anniversary, <span id="her-name-footer">my love</span>.</p><a id="song-link" class="outline-btn hidden" href="#" target="_blank" rel="noopener noreferrer">Our song ↗</a><small>made with love, by <span id="from-name">me</span> · forever & always ♡</small></section>
+  </main>
+  <div id="letter-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true"><div class="modal-backdrop" data-close></div><div class="modal-panel"><button class="modal-close" type="button" data-close aria-label="Close letter">×</button><div class="letter-paper"><span class="eyebrow">A LETTER FOR YOU · ♡</span><h2 id="modal-title">To my favorite person,</h2><div id="letter-body" class="letter-body"></div><p class="letter-signature">Always yours,<br /><span id="signature">Your Name</span> ♡</p></div></div></div>
+  <div id="edit-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="edit-modal-title" aria-hidden="true"><div class="modal-backdrop" data-close></div><div class="modal-panel edit-panel"><button class="modal-close" type="button" data-close aria-label="Close editor">×</button><span class="eyebrow">A LITTLE NOTE FROM YOU</span><h2 id="edit-modal-title">Write your letter ♡</h2><label for="edit-text">Your personal anniversary letter</label><textarea id="edit-text" rows="11" placeholder="My love, ..."></textarea><div class="edit-actions"><button id="save-letter-btn" class="primary-btn" type="button">Save on this device ♡</button><button id="reset-letter-btn" class="outline-btn" type="button">Restore original</button></div><p class="storage-warning">Important: Saving here only changes this browser. To make your letter appear on her phone and your public GitHub website, paste it into the <code>letter</code> field in <code>config.js</code> and upload that edited file to GitHub.</p></div></div>
+  <noscript>This website needs JavaScript enabled for its interactive surprises.</noscript>
+</body>
+</html>
